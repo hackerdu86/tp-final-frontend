@@ -9,12 +9,18 @@ import AddStudentForm from "./components/pages/non-static-pages/AddStudentForm";
 import RegisteredStudents from "./components/pages/non-static-pages/RegisteredStudents";
 import AddInternshipForm from "./components/pages/non-static-pages/AddInternshipForm";
 import AvailableInternships from "./components/pages/non-static-pages/AvailableInternships";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  RouterProvider,
+  Router,
+  Switch,
+} from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <link
         rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -24,8 +30,7 @@ function App() {
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       ></link>
       <NavigationBar />
-
-      <Routes>
+      <Switch>
         <Route path="/" element={<MainMenuPage />} />
         <Route
           path="/internship-procedures-employers"
@@ -50,9 +55,9 @@ function App() {
           path="/internships/available-internships"
           element={<AvailableInternships />}
         />
-      </Routes>
-      <FooterBar />
-    </BrowserRouter>
+        <FooterBar />
+      </Switch>
+    </Router>
   );
 }
 
