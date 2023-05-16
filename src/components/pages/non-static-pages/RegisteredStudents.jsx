@@ -91,6 +91,7 @@ function RegisteredStudents() {
                 fullName={student.studentFullName}
                 email={student.studentEmail}
                 profil={student.exitProfil}
+                daNumber={student.daNumber}
                 registeredInterships={student.registeredInterships}
                 primaryStyle={primaryStyle}
                 deleteStudent={deleteStudent}

@@ -31,6 +31,7 @@ function StudentCard(props) {
     >
       <h5 class="card-header">Nom de l'étudiant: {props.fullName}</h5>
       <div class="card-body">
+        <h6 class="card-title">Da: {props.daNumber}</h6>
         <h6 class="card-title">Courriel: {props.email}</h6>
         <h6 class="card-title">Profil: {props.profil}</h6>
         <span class="dropdown">

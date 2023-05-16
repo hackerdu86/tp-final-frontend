@@ -11,15 +11,23 @@ import AddInternshipForm from "./components/pages/non-static-pages/AddInternship
 import AvailableInternships from "./components/pages/non-static-pages/AvailableInternships";
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function App() {
+  const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    const currentPath = window.location.pathname;
-    navigate(currentPath);
-  }, [navigate]);
+    const currentPath = location.pathname;
+    sessionStorage.setItem("currentPath", currentPath);
+  }, [location]);
+
+  useEffect(() => {
+    const storedPath = sessionStorage.getItem("currentPath");
+    if (storedPath && storedPath !== location.pathname) {
+      navigate(storedPath);
+    }
+  }, [location, navigate]);
 
   return (
     <>
