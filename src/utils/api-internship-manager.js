@@ -1,5 +1,5 @@
 import axios from "axios";
-const URL = "/internships/";
+const URL = process.env.API_ROUTE + "/internships/";
 
 //GET
 async function getInternshipsEntries() {
