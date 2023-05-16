@@ -1,5 +1,5 @@
 import axios from "axios";
-const URL =  process.env.API_ROUTE + "/students/";
+const URL = "https://gestion-de-stages-api-hackerdu86.onrender.com/students/";
 
 //GET
 async function getStudentsEntries() {
