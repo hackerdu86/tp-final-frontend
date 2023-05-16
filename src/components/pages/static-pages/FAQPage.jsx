@@ -2,7 +2,18 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
+import { useEffect } from 'react';
+import { useNavigate  } from 'react-router-dom';
+
 function FAQPage() {
+
+  const history = useNavigate ();
+
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    history(currentPath);
+  }, [history]);
+
   return (
     <div className="card">
       <div className="card-header">

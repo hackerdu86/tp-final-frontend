@@ -9,7 +9,7 @@ import AddStudentForm from "./components/pages/non-static-pages/AddStudentForm";
 import RegisteredStudents from "./components/pages/non-static-pages/RegisteredStudents";
 import AddInternshipForm from "./components/pages/non-static-pages/AddInternshipForm";
 import AvailableInternships from "./components/pages/non-static-pages/AvailableInternships";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 
 function App() {
   return (
