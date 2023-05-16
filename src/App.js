@@ -9,9 +9,18 @@ import AddStudentForm from "./components/pages/non-static-pages/AddStudentForm";
 import RegisteredStudents from "./components/pages/non-static-pages/RegisteredStudents";
 import AddInternshipForm from "./components/pages/non-static-pages/AddInternshipForm";
 import AvailableInternships from "./components/pages/non-static-pages/AvailableInternships";
-import {  Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    navigate(currentPath);
+  }, [navigate]);
+
   return (
     <>
       <link
