@@ -21,7 +21,7 @@ function FooterBar() {
               </ul>
             </div>
           </div>
-          <p className="copyright">Youva Chaou © 2023/05/15</p>
+          <p className="copyright">Youva Chaou © 2023/05/16</p>
         </div>
       </footer>
     </div>
